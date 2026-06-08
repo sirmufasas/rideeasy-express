@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { Car, Clock, ShieldCheck, Star, Phone, MapPin, BriefcaseBusiness, PackageCheck } from "lucide-react";
+import { Car, Clock, ShieldCheck, Star, Phone, MapPin, PackageCheck } from "lucide-react";
 import { Toaster } from "@/components/ui/sonner";
 import { BookingForm } from "@/components/BookingForm";
 import { CarLoader } from "@/components/CarLoader";
