@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { Car, Clock, ShieldCheck, Star, Phone, MapPin } from "lucide-react";
+import { Car, Clock, ShieldCheck, Star, Phone, MapPin, PackageCheck } from "lucide-react";
 import { Toaster } from "@/components/ui/sonner";
 import { BookingForm } from "@/components/BookingForm";
 import { CarLoader } from "@/components/CarLoader";
@@ -47,6 +47,7 @@ function Home() {
           </div>
           <nav className="hidden gap-6 text-sm font-medium text-muted-foreground md:flex">
             <a href="#book" className="transition-colors hover:text-foreground">Book</a>
+            <a href="#services" className="transition-colors hover:text-foreground">Services</a>
             <a href="#fleet" className="transition-colors hover:text-foreground">Fleet</a>
             <a href="#how" className="transition-colors hover:text-foreground">How it works</a>
             <a href="#contact" className="transition-colors hover:text-foreground">Contact</a>
@@ -113,8 +114,23 @@ function Home() {
         <BookingForm />
       </section>
 
+      {/* Services */}
+      <section id="services" className="border-y bg-secondary/35 py-20">
+        <div className="mx-auto max-w-6xl px-4">
+          <h2 className="font-display text-3xl font-bold md:text-4xl">Services offered</h2>
+          <p className="mt-2 max-w-xl text-muted-foreground">
+            KGC support for transport, protection and supply needs.
+          </p>
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            <Service icon={<ShieldCheck className="h-5 w-5" />} title="Security" desc="Reliable security support for private, event and business needs." />
+            <Service icon={<PackageCheck className="h-5 w-5" />} title="Suppliers" desc="Supplier coordination for products, deliveries and operational requests." />
+            <Service icon={<Car className="h-5 w-5" />} title="Shuttlers" desc="Scheduled and on-demand rides in the white Haval Jolion." />
+          </div>
+        </div>
+      </section>
+
       {/* How it works */}
-      <section id="how" className="border-t bg-secondary/40 py-20">
+      <section id="how" className="bg-background py-20">
         <div className="mx-auto max-w-6xl px-4">
           <h2 className="font-display text-3xl font-bold md:text-4xl">How it works</h2>
           <p className="mt-2 max-w-xl text-muted-foreground">
@@ -203,6 +219,18 @@ function Step({ n, title, desc }: { n: string; title: string; desc: string }) {
       </div>
       <h3 className="mt-4 font-display text-lg font-semibold">{title}</h3>
       <p className="mt-1 text-sm text-muted-foreground">{desc}</p>
+    </div>
+  );
+}
+
+function Service({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) {
+  return (
+    <div className="rounded-2xl border bg-card p-6 shadow-sm transition-transform hover:-translate-y-1">
+      <div className="grid h-11 w-11 place-items-center rounded-xl bg-primary/10 text-primary">
+        {icon}
+      </div>
+      <h3 className="mt-5 font-display text-xl font-semibold">{title}</h3>
+      <p className="mt-2 text-sm leading-6 text-muted-foreground">{desc}</p>
     </div>
   );
 }
