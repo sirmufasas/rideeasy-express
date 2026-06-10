@@ -223,10 +223,13 @@ export function BookingForm() {
           </div>
         </div>
 
-        <Button type="submit" size="lg" className="mt-6 w-full gap-2 text-base">
+        <button
+          type="submit"
+          className="btn-grey-glow mt-8 inline-flex w-full items-center justify-center gap-2 bg-primary px-6 py-3.5 text-base font-semibold text-primary-foreground"
+        >
           <Send className="h-4 w-4" />
           Send booking via WhatsApp
-        </Button>
+        </button>
         <p className="mt-3 text-center text-xs text-muted-foreground">
           We'll open WhatsApp with your ride details pre-filled. Just hit send.
         </p>
