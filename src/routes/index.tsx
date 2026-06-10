@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Car, Clock, ShieldCheck, Star } from "lucide-react";
+import { Clock, ShieldCheck, Star } from "lucide-react";
 import { Toaster } from "@/components/ui/sonner";
 import { CarLoader } from "@/components/CarLoader";
 import { SiteHeader } from "@/components/SiteHeader";
@@ -104,6 +104,3 @@ function Stat({ icon, label }: { icon: React.ReactNode; label: string }) {
     </span>
   );
 }
-
-// Used in Car icon import below
-void Car;
