@@ -12,7 +12,7 @@ export function CarLoader({ label = "Connecting your driver…" }: { label?: str
             src={car}
             alt=""
             aria-hidden
-            className="h-32 w-auto drop-shadow-[0_20px_30px_rgba(37,99,235,0.25)] md:h-44"
+            className="h-32 w-auto scale-x-[-1] drop-shadow-[0_20px_30px_rgba(37,99,235,0.25)] md:h-44"
           />
         </div>
         <div className="road-stripes mx-auto mt-2 h-[2px] w-[90%] opacity-40" />
