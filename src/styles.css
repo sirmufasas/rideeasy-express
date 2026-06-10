@@ -121,6 +121,25 @@
   100% { background-position: 200% 0; }
 }
 
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 color-mix(in oklab, oklch(0.6 0.01 245) 55%, transparent); }
+  70%  { box-shadow: 0 0 0 14px color-mix(in oklab, oklch(0.6 0.01 245) 0%, transparent); }
+  100% { box-shadow: 0 0 0 0 color-mix(in oklab, oklch(0.6 0.01 245) 0%, transparent); }
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes wheel-spin {
+  to { transform: rotate(-360deg); }
+}
+
 @utility animate-drive {
   animation: drive-across 3.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
 }
@@ -129,6 +148,12 @@
 }
 @utility animate-float-up {
   animation: float-up 0.6s ease-out both;
+}
+@utility animate-fade-in-up {
+  animation: fade-in-up 0.7s ease-out both;
+}
+@utility animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
 }
 @utility road-stripes {
   background-image: linear-gradient(90deg, var(--color-foreground) 50%, transparent 50%);
@@ -142,4 +167,30 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+@utility btn-grey-glow {
+  position: relative;
+  border-radius: 9999px;
+  box-shadow:
+    0 0 0 1px oklch(0.85 0.01 245),
+    0 0 0 6px color-mix(in oklab, oklch(0.7 0.01 245) 22%, transparent),
+    0 10px 30px -8px color-mix(in oklab, oklch(0.5 0.02 245) 35%, transparent);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  &:hover {
+    box-shadow:
+      0 0 0 1px oklch(0.85 0.01 245),
+      0 0 0 10px color-mix(in oklab, oklch(0.7 0.01 245) 28%, transparent),
+      0 16px 40px -10px color-mix(in oklab, oklch(0.5 0.02 245) 45%, transparent);
+    transform: translateY(-2px);
+  }
+}
+@utility hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px -18px color-mix(in oklab, oklch(0.4 0.02 245) 35%, transparent);
+  }
+}
+@utility pulse-ring {
+  animation: pulse-ring 2.2s ease-out infinite;
 }
