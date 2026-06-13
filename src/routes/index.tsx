@@ -16,11 +16,18 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  const [booting, setBooting] = useState(true);
+  const [booting, setBooting] = useState(() => {
+    if (typeof window === "undefined") return false;
+    return !sessionStorage.getItem("kgc_booted");
+  });
   useEffect(() => {
-    const t = setTimeout(() => setBooting(false), 1800);
+    if (!booting) return;
+    const t = setTimeout(() => {
+      sessionStorage.setItem("kgc_booted", "1");
+      setBooting(false);
+    }, 1500);
     return () => clearTimeout(t);
-  }, []);
+  }, [booting]);
 
   if (booting) return <CarLoader label="Starting your engine…" />;
 
