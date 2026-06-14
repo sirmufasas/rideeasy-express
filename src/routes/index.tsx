@@ -16,16 +16,10 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  const [booting, setBooting] = useState(() => {
-    if (typeof window === "undefined") return false;
-    return !sessionStorage.getItem("kgc_booted");
-  });
+  const [booting, setBooting] = useState(true);
   useEffect(() => {
     if (!booting) return;
-    const t = setTimeout(() => {
-      sessionStorage.setItem("kgc_booted", "1");
-      setBooting(false);
-    }, 40000);
+    const t = setTimeout(() => setBooting(false), 40000);
     return () => clearTimeout(t);
   }, [booting]);
 
