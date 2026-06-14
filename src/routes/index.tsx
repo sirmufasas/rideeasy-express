@@ -25,7 +25,7 @@ function Home() {
     const t = setTimeout(() => {
       sessionStorage.setItem("kgc_booted", "1");
       setBooting(false);
-    }, 1500);
+    }, 40000);
     return () => clearTimeout(t);
   }, [booting]);
 
