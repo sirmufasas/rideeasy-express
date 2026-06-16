@@ -10,7 +10,6 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ServicesRouteImport } from './routes/services'
-import { Route as SecurityRouteImport } from './routes/security'
 import { Route as SafeguardRouteImport } from './routes/safeguard'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as BookRouteImport } from './routes/book'
@@ -20,11 +19,6 @@ import { Route as IndexRouteImport } from './routes/index'
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SecurityRoute = SecurityRouteImport.update({
-  id: '/security',
-  path: '/security',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SafeguardRoute = SafeguardRouteImport.update({
@@ -59,7 +53,6 @@ export interface FileRoutesByFullPath {
   '/book': typeof BookRoute
   '/contact': typeof ContactRoute
   '/safeguard': typeof SafeguardRoute
-  '/security': typeof SecurityRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesByTo {
@@ -68,7 +61,6 @@ export interface FileRoutesByTo {
   '/book': typeof BookRoute
   '/contact': typeof ContactRoute
   '/safeguard': typeof SafeguardRoute
-  '/security': typeof SecurityRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesById {
@@ -78,28 +70,13 @@ export interface FileRoutesById {
   '/book': typeof BookRoute
   '/contact': typeof ContactRoute
   '/safeguard': typeof SafeguardRoute
-  '/security': typeof SecurityRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/about'
-    | '/book'
-    | '/contact'
-    | '/safeguard'
-    | '/security'
-    | '/services'
+  fullPaths: '/' | '/about' | '/book' | '/contact' | '/safeguard' | '/services'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/about'
-    | '/book'
-    | '/contact'
-    | '/safeguard'
-    | '/security'
-    | '/services'
+  to: '/' | '/about' | '/book' | '/contact' | '/safeguard' | '/services'
   id:
     | '__root__'
     | '/'
@@ -107,7 +84,6 @@ export interface FileRouteTypes {
     | '/book'
     | '/contact'
     | '/safeguard'
-    | '/security'
     | '/services'
   fileRoutesById: FileRoutesById
 }
@@ -117,7 +93,6 @@ export interface RootRouteChildren {
   BookRoute: typeof BookRoute
   ContactRoute: typeof ContactRoute
   SafeguardRoute: typeof SafeguardRoute
-  SecurityRoute: typeof SecurityRoute
   ServicesRoute: typeof ServicesRoute
 }
 
@@ -128,13 +103,6 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/security': {
-      id: '/security'
-      path: '/security'
-      fullPath: '/security'
-      preLoaderRoute: typeof SecurityRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/safeguard': {
@@ -181,7 +149,6 @@ const rootRouteChildren: RootRouteChildren = {
   BookRoute: BookRoute,
   ContactRoute: ContactRoute,
   SafeguardRoute: SafeguardRoute,
-  SecurityRoute: SecurityRoute,
   ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport
