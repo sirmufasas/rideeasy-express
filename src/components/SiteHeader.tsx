@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Car, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { ThemeToggle } from "./ThemeProvider";
 import logoAsset from "@/assets/kgc-logo.png.asset.json";
