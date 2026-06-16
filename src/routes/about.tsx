@@ -25,12 +25,19 @@ function AboutPage() {
 
       <div className="mt-12 flex justify-center">
         <figure className="max-w-sm">
-          <img
-            src={founderAsset.url}
-            alt="Founder of Khomba Group Courier"
-            className="rounded-2xl border shadow-md"
-          />
-          <figcaption className="mt-3 text-center text-sm text-muted-foreground">Our founder</figcaption>
+          <div className="relative">
+            <img
+              src={founderAsset.url}
+              alt="Mr Benjamin Khomba — Founder of Khomba Group Courier"
+              className="rounded-2xl border shadow-md"
+            />
+            <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-foreground px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-background shadow-lg">
+              Mr Benjamin Khomba
+            </span>
+          </div>
+          <figcaption className="mt-6 text-center text-sm font-medium text-muted-foreground">
+            Founder & Managing Director
+          </figcaption>
         </figure>
       </div>
 

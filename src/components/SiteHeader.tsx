@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ExternalLink } from "lucide-react";
 import { useState } from "react";
 import { ThemeToggle } from "./ThemeProvider";
 import logoAsset from "@/assets/kgc-logo.png.asset.json";
@@ -8,7 +8,6 @@ const links = [
   { to: "/", label: "Home" },
   { to: "/book", label: "Book" },
   { to: "/services", label: "Services" },
-  { to: "/security", label: "Security" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -55,6 +54,16 @@ export function SiteHeader() {
               {l.label}
             </Link>
           ))}
+          <a
+            href="/safeguard"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-between rounded-lg bg-gradient-to-r from-[#5a1a1a] to-[#1f3b66] px-3 py-2 font-semibold text-white shadow-sm transition hover:opacity-90"
+            onClick={() => setOpen(false)}
+          >
+            <span>Security — Safeguard Solutions</span>
+            <ExternalLink className="h-4 w-4" />
+          </a>
         </nav>
       </div>
     </header>
