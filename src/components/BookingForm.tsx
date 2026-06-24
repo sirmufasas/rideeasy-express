@@ -12,8 +12,8 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { toast } from "sonner";
 import { CarLoader } from "./CarLoader";
 
-// EDIT ME: replace with your driver's WhatsApp number in international format, no +/spaces.
-const DRIVER_WHATSAPP = "27000000000";
+// Raw digits only (no +, no spaces) — required for wa.me links
+const DRIVER_WHATSAPP = "27731794085";
 
 const RIDE_TYPES = [
   { id: "regular", label: "Regular", desc: "Everyday ride" },
@@ -55,16 +55,18 @@ export function BookingForm() {
     }
     const ride = RIDE_TYPES.find((r) => r.id === rideType)?.label ?? "Regular";
     const when = `${format(date, "EEE, d MMM yyyy")} at ${time}`;
-    const message =
-      `*New Shuttle Booking*%0A` +
-      `%0A👤 *Name:* ${encodeURIComponent(name)}` +
-      `%0A🚗 *Ride type:* ${encodeURIComponent(ride)}` +
-      `%0A📅 *When:* ${encodeURIComponent(when)}` +
-      `%0A📍 *Pickup:* ${encodeURIComponent(pickup)}` +
-      `%0A🏁 *Destination:* ${encodeURIComponent(destination)}` +
-      (notes ? `%0A📝 *Notes:* ${encodeURIComponent(notes)}` : "");
 
-    const url = `https://wa.me/${DRIVER_WHATSAPP}?text=${message}`;
+    // Build plain text with real newlines — encode the whole thing once, at the end
+    const message =
+      `New Shuttle Booking\n\n` +
+      `Name: ${name}\n` +
+      `Ride type: ${ride}\n` +
+      `When: ${when}\n` +
+      `Pickup: ${pickup}\n` +
+      `Destination: ${destination}` +
+      (notes ? `\n Notes: ${notes}` : "");
+
+    const url = `https://wa.me/${DRIVER_WHATSAPP}?text=${encodeURIComponent(message)}`;
 
     setLoading(true);
     setTimeout(() => {

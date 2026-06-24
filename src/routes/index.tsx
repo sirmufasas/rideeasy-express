@@ -19,7 +19,7 @@ function Home() {
   const [booting, setBooting] = useState(true);
   useEffect(() => {
     if (!booting) return;
-    const t = setTimeout(() => setBooting(false), 40000);
+    const t = setTimeout(() => setBooting(false), 6000);
     return () => clearTimeout(t);
   }, [booting]);
 
