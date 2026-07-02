@@ -17,7 +17,7 @@ import "../_libs/cookie-es.mjs";
 import "../_libs/seroval.mjs";
 import "../_libs/seroval-plugins.mjs";
 import "node:stream/web";
-const appCss = "/assets/styles-BxIv52Zc.css";
+const appCss = "/assets/styles-DYyBa2qg.css";
 function reportLovableError(error, context = {}) {
   if (typeof window === "undefined") return;
   window.__lovableEvents?.captureException?.(
@@ -83,7 +83,7 @@ function SiteHeader() {
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/", className: "flex items-center gap-2", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: logoAsset, alt: "Khomba Group Courier", className: "h-10 w-auto" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-sm font-bold tracking-tight sm:text-base", children: "KHOMBA GROUP COURIER" })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display text-sm font-bold tracking-tight sm:text-base", children: "KGC SHUTTLES" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(ThemeToggle, {}),
@@ -138,7 +138,7 @@ function SiteFooter() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { className: "border-t bg-secondary/30", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-4 py-10 md:flex-row md:items-center", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs(Link, { to: "/", className: "flex items-center gap-2", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: logoAsset, alt: "Khomba Group Courier", className: "h-9 w-auto" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display font-bold", children: "KHOMBA GROUP COURIER" })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-display font-bold", children: "KGC SHUTTLES" })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-xs text-muted-foreground", children: [
       "© ",
@@ -263,7 +263,7 @@ const Route$4 = createFileRoute("/safeguard")({
     throw redirect({ href: "https://safeguardsecuritysolutions.netlify.app/" });
   }
 });
-const $$splitComponentImporter$3 = () => import("./contact-BxRIvOKC.mjs");
+const $$splitComponentImporter$3 = () => import("./contact-CFw5Fw0Q.mjs");
 const Route$3 = createFileRoute("/contact")({
   head: () => ({
     meta: [{
@@ -275,7 +275,7 @@ const Route$3 = createFileRoute("/contact")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-const $$splitComponentImporter$2 = () => import("./book-DnAII2Dn.mjs");
+const $$splitComponentImporter$2 = () => import("./book-C2qDIts1.mjs");
 const Route$2 = createFileRoute("/book")({
   head: () => ({
     meta: [{
@@ -287,19 +287,19 @@ const Route$2 = createFileRoute("/book")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./about-Bq2X7IK1.mjs");
+const $$splitComponentImporter$1 = () => import("./about-4QBb9QMX.mjs");
 const Route$1 = createFileRoute("/about")({
   head: () => ({
     meta: [{
-      title: "About — Khomba Group Courier"
+      title: "About — KGC"
     }, {
       name: "description",
-      content: "One trusted name for shuttles, security and suppliers."
+      content: "Learn more about KGC and our commitment to excellence."
     }]
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-BwsTAcAv.mjs");
+const $$splitComponentImporter = () => import("./index-CPpRAQKg.mjs");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{
