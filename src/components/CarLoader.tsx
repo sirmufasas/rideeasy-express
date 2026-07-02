@@ -4,7 +4,7 @@ export function CarLoader({ label = "Connecting your driver…" }: { label?: str
   return (
     <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background/95 backdrop-blur-sm">
       <p className="mb-8 font-display text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-        WELCOME TO KGC
+        WELCOME TO KGC SHUTTLES
       </p>
       <div className="relative w-full overflow-hidden">
         <div className="animate-drive mx-auto w-fit">

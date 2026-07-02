@@ -20,7 +20,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4">
         <Link to="/" className="flex items-center gap-2">
           <img src={logoAsset} alt="Khomba Group Courier" className="h-10 w-auto" />
-          <span className="font-display text-sm font-bold tracking-tight sm:text-base">KHOMBA GROUP COURIER</span>
+          <span className="font-display text-sm font-bold tracking-tight sm:text-base">KGC SHUTTLES</span>
         </Link>
 
         <div className="flex items-center gap-3">

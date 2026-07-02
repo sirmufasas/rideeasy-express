@@ -1,2 +1,9 @@
 [build]
   command = "npm run build"
+  publish = "dist/client"
+
+# SPA/SSR fallback: TanStack Start's Nitro "netlify" preset generates its own
+# functions + redirects config during build (typically under .netlify/ or
+# dist/server), so you usually don't need to hand-write redirects here.
+# If you find pages 404 rather than going blank after fixing the publish
+# path, that's the next thing to check — see notes below.

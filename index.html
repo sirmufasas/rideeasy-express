@@ -12,5 +12,86 @@
   </head>
   <body>
     <div id="root"></div>
+
+    <!--
+      BOOT DIAGNOSTICS (safe to remove once things are stable)
+
+      What this does:
+      - Logs each stage of page boot to the console with a "[boot]" prefix,
+        so you can filter devtools console by "boot" and see exactly how far
+        things got.
+      - Catches JS errors and unhandled promise rejections that happen before
+        React mounts (these are invisible otherwise — a white screen with no
+        console.error visible unless devtools happens to be open at the time).
+      - If #root is still empty ~4s after the page loads, assumes the app
+        failed to mount and shows a visible on-page panel (not just console)
+        with whatever error info was captured. This matters because most
+        people reporting "it's blank" won't have devtools open.
+
+      Where to look when something's wrong, in order:
+      1. THIS panel / browser console (Cmd+Opt+J or F12) — client-side JS
+         errors, 404s on asset files (wrong publish dir), CSP/CORS blocks.
+      2. Network tab — check the request for your main JS bundle
+         (something like /assets/index-XXXX.js). 404 there = publish
+         directory/build output mismatch. 200 but blank = runtime JS error,
+         check console.
+      3. Netlify dashboard → your site → Deploys → click the latest deploy →
+         "Deploy log" — build-time failures (npm install/build errors) show
+         here. This is the only place that shows if the BUILD itself failed.
+      4. Netlify dashboard → your site → Logs → Functions (or "Edge
+         functions") — if TanStack Start's SSR function is erroring, it
+         won't show in browser console at all, only here.
+    -->
+    <script>
+      (function () {
+        var log = function (msg) {
+          console.log("[boot] " + msg);
+        };
+        var errors = [];
+
+        log("index.html parsed, starting boot checks");
+
+        window.addEventListener("error", function (e) {
+          var info = (e.filename || "unknown file") + ":" + e.lineno + " — " + e.message;
+          errors.push(info);
+          console.error("[boot] uncaught error: " + info);
+        });
+
+        window.addEventListener("unhandledrejection", function (e) {
+          var info = "unhandled promise rejection: " + (e.reason && e.reason.message ? e.reason.message : e.reason);
+          errors.push(info);
+          console.error("[boot] " + info);
+        });
+
+        window.addEventListener("DOMContentLoaded", function () {
+          log("DOMContentLoaded fired");
+        });
+
+        window.addEventListener("load", function () {
+          log("window load fired, root has " + document.getElementById("root").children.length + " children so far");
+        });
+
+        setTimeout(function () {
+          var root = document.getElementById("root");
+          if (root && root.children.length === 0) {
+            console.error("[boot] root is still empty after 4s — app did not mount. Errors captured: " + (errors.length || "none"));
+            var panel = document.createElement("div");
+            panel.style.cssText =
+              "position:fixed;inset:0;background:#111;color:#f5f5f5;font:14px/1.5 monospace;padding:24px;z-index:99999;overflow:auto;";
+            var errorList = errors.length
+              ? errors.map(function (e) { return "<li>" + e.replace(/</g, "&lt;") + "</li>"; }).join("")
+              : "<li>No JS errors were caught — check the Network tab for a failed/missing bundle request, or the Netlify deploy log for a build failure.</li>";
+            panel.innerHTML =
+              "<h2 style='margin-top:0'>App failed to load</h2>" +
+              "<p>This page is a fallback shown because nothing rendered into #root within 4 seconds.</p>" +
+              "<p><strong>Captured errors:</strong></p><ul>" + errorList + "</ul>" +
+              "<p>Next steps: open devtools console/network tab, then check your Netlify deploy log and function logs.</p>";
+            document.body.appendChild(panel);
+          } else {
+            log("root has content, app mounted successfully");
+          }
+        }, 4000);
+      })();
+    </script>
   </body>
 </html>
