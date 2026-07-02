@@ -22,7 +22,7 @@ function AboutPage() {
     <section className="mx-auto max-w-6xl px-4 py-16">
       <div className="mx-auto max-w-3xl text-center animate-fade-in-up">
         <h1 className="font-display text-3xl font-bold md:text-5xl">
-          About <span className="text-gradient">KGC</span>
+          About <span className="text-gradient">KGC SHUTTLES</span>
         </h1>
         <p className="mt-4 text-lg text-muted-foreground">
           KGC was built on a simple idea: getting a ride, hiring security, or working with a
