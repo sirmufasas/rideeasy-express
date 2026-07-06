@@ -10,10 +10,10 @@ function AboutPage() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "KGC" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-lg text-muted-foreground", children: "KGC was built on a simple idea: getting a ride, hiring security, or working with a supplier shouldn't be complicated. No apps to download, no accounts to create — just a message on WhatsApp and it's sorted." }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-muted-foreground", children: "From our white Haval Jolion shuttle to vetted security personnel and trusted supplier partners, we focus on being reliable, easy to reach, and easy to work with." })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-muted-foreground", children: "From our shuttle to vetted security personnel and trusted supplier partners, we focus on being reliable, easy to reach, and easy to work with." })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-14 grid gap-6 sm:grid-cols-3", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(ServiceCard, { icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Truck, { className: "h-5 w-5" }), title: "Shuttles", description: "Book a ride in our white Haval Jolion for city and airport runs, quick and comfortable." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(ServiceCard, { icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Truck, { className: "h-5 w-5" }), title: "Shuttles", description: "Book a ride for city and airport runs, quick and comfortable." }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(ServiceCard, { icon: /* @__PURE__ */ jsxRuntimeExports.jsx(ShieldCheck, { className: "h-5 w-5" }), title: "Security", description: "Trusted, vetted security personnel available when and where you need them." }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(ServiceCard, { icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Users, { className: "h-5 w-5" }), title: "Suppliers", description: "A network of reliable suppliers we work with directly, so you don't have to chase anyone." })
     ] }),

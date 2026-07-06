@@ -30,7 +30,7 @@ function AboutPage() {
           just a message on WhatsApp and it's sorted.
         </p>
         <p className="mt-4 text-muted-foreground">
-          From our white Haval Jolion shuttle to vetted security personnel and trusted
+          From our shuttle to vetted security personnel and trusted
           supplier partners, we focus on being reliable, easy to reach, and easy to work with.
         </p>
       </div>
@@ -39,7 +39,7 @@ function AboutPage() {
         <ServiceCard
           icon={<Truck className="h-5 w-5" />}
           title="Shuttles"
-          description="Book a ride in our white Haval Jolion for city and airport runs, quick and comfortable."
+          description="Book a ride for city and airport runs, quick and comfortable."
         />
         <ServiceCard
           icon={<ShieldCheck className="h-5 w-5" />}

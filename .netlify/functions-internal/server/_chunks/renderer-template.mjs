@@ -8,7 +8,7 @@ const rendererTemplate = () => new HTTPResponse(`<!doctype html>\r
     <meta charset="UTF-8" />\r
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />\r
     <title>KGC — Shuttles, Security & Suppliers</title>\r
-    <meta name="description" content="Book a white Haval Jolion shuttle, hire trusted security, or work with our suppliers — all via WhatsApp." />\r
+    <meta name="description" content="Book a shuttle, hire trusted security, or work with our suppliers — all via WhatsApp." />\r
 \r
     <link rel="icon" href="/favicon.ico" sizes="any" />\r
     <link rel="icon" type="image/png" href="/favicon.png?v=3" />\r

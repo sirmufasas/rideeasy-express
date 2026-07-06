@@ -217,7 +217,7 @@ const Route$6 = createRootRouteWithContext()({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "KGC — Shuttles, Security & Suppliers" },
-      { name: "description", content: "Book a white Haval Jolion shuttle, hire trusted security, or work with our suppliers — all via WhatsApp." }
+      { name: "description", content: "Book a shuttle, hire trusted security, or work with our suppliers — all via WhatsApp." }
     ],
     links: [
       { rel: "stylesheet", href: appCss }
@@ -282,7 +282,7 @@ const Route$2 = createFileRoute("/book")({
       title: "Book a ride — KGC"
     }, {
       name: "description",
-      content: "Book your white Haval Jolion shuttle in seconds via WhatsApp."
+      content: "Book your shuttle in seconds via WhatsApp."
     }]
   }),
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
@@ -306,7 +306,7 @@ const Route = createFileRoute("/")({
       title: "KGC — Shuttles, Security & Suppliers"
     }, {
       name: "description",
-      content: "Premium shuttle service in a white Haval Jolion. Book via WhatsApp."
+      content: "Premium shuttle service. Book via WhatsApp."
     }]
   }),
   component: lazyRouteComponent($$splitComponentImporter, "component")

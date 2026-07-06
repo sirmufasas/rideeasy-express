@@ -17,7 +17,7 @@ function ServicesPage() {
       <h1 className="font-display text-3xl font-bold md:text-5xl">Services offered</h1>
       <p className="mt-3 max-w-xl text-muted-foreground">One team. Three trusted services — transport, protection and supply.</p>
       <div className="mt-10 grid gap-4 md:grid-cols-3">
-        <Service icon={<Car className="h-5 w-5" />} title="Shuttlers" desc="Scheduled and on-demand rides in our white Haval Jolion." />
+        <Service icon={<Car className="h-5 w-5" />} title="Shuttlers" desc="Scheduled and on-demand rides." />
         <Service icon={<ShieldCheck className="h-5 w-5" />} title="Security" desc="Reliable security for private, event and business needs." />
         <Service icon={<PackageCheck className="h-5 w-5" />} title="Suppliers" desc="Supplier coordination for products and deliveries." />
       </div>

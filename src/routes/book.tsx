@@ -5,7 +5,7 @@ export const Route = createFileRoute("/book")({
   head: () => ({
     meta: [
       { title: "Book a ride — KGC" },
-      { name: "description", content: "Book your white Haval Jolion shuttle in seconds via WhatsApp." },
+      { name: "description", content: "Book your shuttle in seconds via WhatsApp." },
     ],
   }),
   component: BookPage,

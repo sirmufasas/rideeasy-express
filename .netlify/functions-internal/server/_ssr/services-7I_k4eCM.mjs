@@ -5,7 +5,7 @@ function ServicesPage() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "font-display text-3xl font-bold md:text-5xl", children: "Services offered" }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 max-w-xl text-muted-foreground", children: "One team. Three trusted services — transport, protection and supply." }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-10 grid gap-4 md:grid-cols-3", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Service, { icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Car, { className: "h-5 w-5" }), title: "Shuttlers", desc: "Scheduled and on-demand rides in our white Haval Jolion." }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Service, { icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Car, { className: "h-5 w-5" }), title: "Shuttlers", desc: "Scheduled and on-demand rides." }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Service, { icon: /* @__PURE__ */ jsxRuntimeExports.jsx(ShieldCheck, { className: "h-5 w-5" }), title: "Security", desc: "Reliable security for private, event and business needs." }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Service, { icon: /* @__PURE__ */ jsxRuntimeExports.jsx(PackageCheck, { className: "h-5 w-5" }), title: "Suppliers", desc: "Supplier coordination for products and deliveries." })
     ] })

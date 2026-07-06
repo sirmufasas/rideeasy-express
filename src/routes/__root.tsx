@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "KGC — Shuttles, Security & Suppliers" },
-      { name: "description", content: "Book a white Haval Jolion shuttle, hire trusted security, or work with our suppliers — all via WhatsApp." },
+      { name: "description", content: "Book a shuttle, hire trusted security, or work with our suppliers — all via WhatsApp." },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

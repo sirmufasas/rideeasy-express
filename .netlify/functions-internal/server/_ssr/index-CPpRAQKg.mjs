@@ -39,7 +39,7 @@ function Home() {
           "Your ride, ",
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "on your terms." })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 max-w-lg text-base text-muted-foreground md:text-lg", children: "Premium shuttle service in a spotless white Haval Jolion. Pick where, when and how — we'll deliver it through a single WhatsApp message." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 max-w-lg text-base text-muted-foreground md:text-lg", children: "Premium shuttle service in a spotless shuttle. Pick where, when and how — we'll deliver it through a single WhatsApp message." }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 flex flex-wrap gap-5", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/book", className: "btn-grey-glow inline-flex items-center gap-2 bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground", children: "Book a ride" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/services", className: "btn-grey-glow inline-flex items-center gap-2 bg-card px-6 py-3 text-sm font-semibold text-foreground", children: "Our services" })

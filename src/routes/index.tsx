@@ -9,7 +9,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "KGC — Shuttles, Security & Suppliers" },
-      { name: "description", content: "Premium shuttle service in a white Haval Jolion. Book via WhatsApp." },
+      { name: "description", content: "Premium shuttle service. Book via WhatsApp." },
     ],
   }),
   component: Home,
@@ -40,7 +40,7 @@ function Home() {
             Your ride, <span className="text-gradient">on your terms.</span>
           </h1>
           <p className="mt-5 max-w-lg text-base text-muted-foreground md:text-lg">
-            Premium shuttle service in a spotless white Haval Jolion. Pick where, when
+            Premium shuttle service. Pick where, when
             and how — we'll deliver it through a single WhatsApp message.
           </p>
           <div className="mt-8 flex flex-wrap gap-5">
